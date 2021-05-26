@@ -48,15 +48,11 @@ public class Controller implements Initializable {
     public Controller(){
         this.personService = new PersonRepository();
     }
-   public void save() throws NullPointerException{
-
-
+   public void save(){
        String firstName = fname.getText();
        String lastName = lname.getText();
        String Ages = age.getText();
-       String Gender;
-       Gender = String.valueOf(gender.getSelectionModel().getSelectedIndex());
-
+       String Gender = gender.getSelectionModel().getSelectedItem().toString();
        Boolean needfirstName = fname.getText().equals("");
        Boolean needlastName = lname.getText().equals("");
        Boolean needAge =age.getText().equals("");
