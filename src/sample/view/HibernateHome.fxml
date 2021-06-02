@@ -11,6 +11,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Text?>
 
+
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Controller">
    <children>
       <Pane prefHeight="622.0" prefWidth="830.0" style="-fx-background-color: #FF661832;">
@@ -31,30 +32,31 @@
             <TextField id="lname" fx:id="lname" layoutX="375.0" layoutY="121.0" />
             <TextField id="age" fx:id="age" layoutX="670.0" layoutY="120.0" />
             <ComboBox id="gender" fx:id="gender" layoutX="377.0" layoutY="184.0" prefWidth="150.0" promptText="Choose" />
-            <TableView fx:id="table" layoutX="61.0" layoutY="337.0" prefHeight="255.0" prefWidth="709.0">
+            <TableView fx:id="table" layoutX="34.0" layoutY="342.0" prefHeight="254.0" prefWidth="733.0">
               <columns>
-                <TableColumn prefWidth="75.0" text="Firstname" />
-                <TableColumn prefWidth="75.0" text="Lastname" />
-                  <TableColumn prefWidth="75.0" text="Age" />
-                  <TableColumn prefWidth="75.0" text="Gender" />
+                  <TableColumn fx:id="ID" prefWidth="55.0" text="ID" />
+                <TableColumn fx:id="firstname" prefWidth="170.0" text="Firstname" />
+                <TableColumn fx:id="lastname" prefWidth="214.0" text="Lastname" />
+                  <TableColumn fx:id="Age" prefWidth="88.0" sortType="DESCENDING" text="Age" />
+                  <TableColumn fx:id="gen" prefWidth="204.0" text="Gender" />
               </columns>
             </TableView>
-            <ImageView layoutX="112.0" layoutY="265.0">
+            <ImageView fitHeight="25.0" fitWidth="32.0" layoutX="112.0" layoutY="265.0">
                <image>
                   <Image url="@../../../../../AppData/Local/Temp/icons8_plus_32px.png" />
                </image>
             </ImageView>
-            <ImageView layoutX="311.0" layoutY="264.0">
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="311.0" layoutY="264.0">
                <image>
                   <Image url="@../../../../../AppData/Local/Temp/icons8_edit_32px.png" />
                </image>
             </ImageView>
-            <ImageView layoutX="482.0" layoutY="263.0">
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="482.0" layoutY="263.0">
                <image>
                   <Image url="@../../../../../AppData/Local/Temp/icons8_trash_can_32px.png" />
                </image>
             </ImageView>
-            <ImageView layoutX="659.0" layoutY="263.0">
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="659.0" layoutY="263.0">
                <image>
                   <Image url="@../../../../../AppData/Local/Temp/icons8_box_important_32px.png" />
                </image>

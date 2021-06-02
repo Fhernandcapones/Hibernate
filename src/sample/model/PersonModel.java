@@ -7,12 +7,12 @@ import javax.persistence.*;
 public class PersonModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id",nullable = false)
+    @Column(name = "id",updatable = false ,nullable = false)
     private Integer id;
     @Column (name = "first_name",nullable = false)
-    private String fName;
+    private String firstname;
     @Column (name = "last_name",nullable = false)
-    private String lName;
+    private String lastname;
     @Column(name = "age",nullable = false)
     private Integer age;
     @Column (name = "gender",nullable = false)
@@ -27,20 +27,20 @@ public class PersonModel {
         this.id = id;
     }
 
-    public String getfName() {
-        return fName;
+    public String getfFirstname() {
+        return firstname;
     }
 
-    public void setfName(String fName) {
-        this.fName = fName;
+    public void setfFirstname(String fName) {
+        this.firstname = fName;
     }
 
-    public String getlName() {
-        return lName;
+    public String getlLastname() {
+        return lastname;
     }
 
-    public void setlName(String lName) {
-        this.lName = lName;
+    public void setlLastname(String lName) {
+        this.lastname = lName;
     }
 
     public Integer getAge() {

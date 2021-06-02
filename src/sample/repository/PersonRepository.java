@@ -7,6 +7,8 @@ import sample.model.PersonModel;
 import sample.service.PersonService;
 import sample.util.Database;
 
+import java.util.List;
+
 public class PersonRepository implements PersonService {
     private static SessionFactory sessionFactory;
     private Transaction transaction;
@@ -16,6 +18,20 @@ public class PersonRepository implements PersonService {
         //tatawagin mo dito si util
         this.sessionFactory = Database.getSessionFactory();
     }
+
+    @Override
+    public List<PersonModel> getPerson(){
+        session = sessionFactory.openSession();
+        try{
+            String hql = "From PersonModel";
+
+            return session.createQuery(hql).list();
+        }
+        finally {
+            session.close();
+        }
+    }
+
 @Override
     public void savePerson(PersonModel person){
         session = sessionFactory.openSession();
